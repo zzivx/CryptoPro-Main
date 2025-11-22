@@ -1,0 +1,41 @@
+# Ignore Python __pycache__ folders
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore key directories and key backups
+keys/
+key_backups/
+
+# Ignore private keys (important!)
+*.pem
+*.key
+
+# Ignore logs
+*.log
+
+# Ignore environment files
+.env
+venv/
+ENV/
+env/
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore compiled or zip outputs
+*.zip
+*.tar.gz
+
+# Ignore build artifacts
+build/
+dist/
