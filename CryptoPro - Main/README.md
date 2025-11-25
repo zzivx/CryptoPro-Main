@@ -5,7 +5,7 @@ This project implements a fully end-to-end encrypted instant messaging system us
 Clients exchange encrypted messages using AES session keys, RSA key exchange, and digital signatures.
 The server stores ciphertext only and never sees plaintext.
 
-This repository contains all phases (2–5), documentation, and the final GUI system.
+This repository contains all phases (1–5), documentation, and the final GUI system.
 
 ------------------------------------------------------------
 Repository Structure
@@ -13,15 +13,15 @@ Repository Structure
 
 CryptoPro-Main/
 |
+|-- CryptProj - phase1/         (Basic AES-encrypted group chat)
 |-- CryptProj - phase2/         (Multi-user encrypted messaging)
 |-- CryptProj - phase3/         (RSA session key exchange)
 |-- CryptProj - phase4/         (Digital signatures + integrity)
 |-- CryptProj - phase5/         (Final GUI version)
 |
-|
 |-- docs/
 |     |-- Project_C_SecureInstantMessaging_v3.docx
-|     |-- Secure_Instant_Messaging_Project_Report (9).docx
+|     |-- Secure_Instant_Messaging_Project_Report.docx
 |     |-- Secure_Instant_Messaging_Presentation_Updated.pptx
 |
 |-- README.md
@@ -57,16 +57,16 @@ The system guarantees:
 Project Phases (Explanation)
 ------------------------------------------------------------
 
-Phase 1 – Basic Messaging + AES (Concept Phase)
-(This phase is not included in ZIP but described for completeness.)
-- Simple socket-based chat.
-- One shared AES key for all messages.
-- Server stores ciphertext only.
-- No RSA keys or signatures yet.
+Phase 1 – Basic Messaging + AES Encryption  
+(Folder: CryptProj - phase1)
+- Simple socket-based chat server and client.
+- Multiple clients can connect; the server broadcasts messages to all others.
+- Messages are encrypted on the client using a single shared AES key.
+- The server only sees base64 ciphertext and logs it; it never decrypts.
 
 ------------------------------------------------------------
 
-Phase 2 – Multi-User Messaging + AES Encryption
+Phase 2 – Multi-User Messaging + AES Encryption  
 (Folder: CryptProj - phase2)
 - Added support for multiple connected users.
 - Added user-to-socket and socket-to-user mapping.
@@ -81,7 +81,7 @@ Phase 2 – Multi-User Messaging + AES Encryption
 
 ------------------------------------------------------------
 
-Phase 3 – RSA Key Exchange + Session Keys
+Phase 3 – RSA Key Exchange + Session Keys  
 (Folder: CryptProj - phase3)
 - Each user has an RSA-2048 key pair.
 - Private key stays on client device.
@@ -94,7 +94,7 @@ Phase 3 – RSA Key Exchange + Session Keys
 
 ------------------------------------------------------------
 
-Phase 4 – Digital Signatures + Integrity Verification
+Phase 4 – Digital Signatures + Integrity Verification  
 (Folder: CryptProj - phase4)
 - Each outgoing message is:
   - Hashed using SHA-256
@@ -108,7 +108,7 @@ Phase 4 – Digital Signatures + Integrity Verification
 
 ------------------------------------------------------------
 
-Phase 5 – Final GUI Client + Key Management
+Phase 5 – Final GUI Client + Key Management  
 (Folder: CryptProj - phase5)
 
 Key Management:
