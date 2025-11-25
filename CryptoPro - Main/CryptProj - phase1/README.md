@@ -1,25 +1,24 @@
-Phase 1 introduces the foundation of the project using AES symmetric encryption with a simple client–server chat.
+# Phase 1 – Basic Messaging & Symmetric Encryption
 
-🔐 Features
+Phase 1 builds the foundation of the secure messaging project using a simple
+client–server chat and **one shared AES key**.
 
-Messages encrypted with a shared AES key
+## 🔐 Features
+- Messages encrypted using a single shared AES-256 key
+- Server stores **only ciphertext**
+- Basic socket communication between clients and server
 
-Server stores only ciphertext
+## 🧠 How It Works
+1. Client encrypts plaintext with AES
+2. Sends ciphertext to server
+3. Server forwards ciphertext only
+4. Receiver decrypts using same AES key
 
-Basic socket communication
+## ✔ Achievements
+- Basic confidentiality
+- Working encrypted chat
+- Framework for later phases
 
-🧠 Workflow
-
-Client encrypts plaintext with AES
-
-Sends ciphertext to server
-
-Receiver decrypts using same key
-
-✔ Achievements
-
-Basic confidentiality
-
-Functional encrypted messaging
-
-Simple starting architecture
+## ▶ Run
+python server.py
+python client.py
